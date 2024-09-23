@@ -48,7 +48,6 @@ main{
 
     transition: .3s;
 
-    font-family: "RockSalt", system-ui;
     text-transform: uppercase;
     font-weight: 600;
     font-style: normal;
@@ -112,7 +111,7 @@ main{
 }
 
 .sobre{
-    min-height: 100vh;
+    min-height: calc(100vh - 125px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -459,20 +458,10 @@ img {
     font-size: 50px;
     gap: 50px;
   }
-  
-  /* Paragrafo de texto não aparece em tela menor que 720px */
-  @media (max-width: 720px) {
-    .titulo {
-      width: 100%;
-      padding: 1%;
-      bottom: 0;
-      font-size: .8em;
-    }
-  
-    .titulo p {
-      display: none;
-    }
-  }
+
+
+
+
 
   @media(max-width: 425px){
     .sobre, .container, .container p{
@@ -480,12 +469,58 @@ img {
         font-size: 16px;
     }
 
+    .nav{
+      font-size: 14px;
+    }
+
+    .nav ul{
+      display: block;
+    }
+
+  
+
+    .logo{
+      display: none;
+    }
+
 }
+
+@media(max-width: 768px){
+  .sobre, .container, .container p{
+      display: block;
+      font-size: 16px;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav ul li{
+    font-size: 11px;
+  }
+
+  .logo{
+    width: 125px;
+    height: 80px;
+  }
+
+}
+
+
 
 @media(max-width: 980px){
   .sobre, .container, .container p{
       display: block;
       font-size: 20px;
+  }
+
+  .nav{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
   }
 
 }
